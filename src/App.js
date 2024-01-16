@@ -7,7 +7,7 @@ import { useEffect, useState} from 'react'
 
 
 const App = () => {
-    const [selected, setSelected] = useState('Discografia')
+    const [selected, setSelected] = useState('Bio')
 
     const [Cd1, setCd1] = useState()
     const [Cd2, setCd2] = useState()

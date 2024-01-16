@@ -100,3 +100,9 @@ a {
 .title {
     font-family: 'Special Elite', cursive;
 }
+
+.title .first-letter {
+    font-size: 150%; /* Ajusta el tamaño de la primera letra según lo desees */
+    line-height: 1;
+}
+
