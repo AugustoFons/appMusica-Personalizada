@@ -32,7 +32,7 @@ a {
     color: white !important;
 }
 
-.category-btn:hover span{
+.category-btn:hover span {
     color: white !important;
 }
 
@@ -41,19 +41,19 @@ a {
     width: 100% !important;
 }
 
-.search-bar{
-    border:none;
-    outline:none;
-    width:150px;
+.search-bar {
+    border: none;
+    outline: none;
+    width: 150px;
 }
 
-.category-btn{
+.category-btn {
     font-weight: 600 !important;
     text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: start;
-    cursor:pointer;
+    cursor: pointer;
     background: transparent;
     outline: none;
     border: none;
@@ -65,32 +65,33 @@ a {
 }
 
 @media screen and (max-width: 900px) {
-.category-btn{
-    margin: 10px;
-}
+    .category-btn {
+        margin: 10px;
+    }
 }
 
-@media screen and (max-width:800px){
-.copyright{
-    display:none !important;
-}
+@media screen and (max-width:800px) {
+    .copyright {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 600px) {
-.scroll-horizontal {
-    overflow: auto !important;
-}
+    .scroll-horizontal {
+        overflow: auto !important;
+    }
 
-.react-player {
-    height: 45vh !important;
-}
-.search-bar{
-    width:100px;
-}
+    .react-player {
+        height: 45vh !important;
+    }
+
+    .search-bar {
+        width: 100px;
+    }
 }
 
 .banner-navbar {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1698119009/banner2_cabaf9.jpg'); 
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1698119009/banner2_cabaf9.jpg');
     background-size: cover;
     background-color: #000;
     background-repeat: no-repeat;
@@ -102,7 +103,18 @@ a {
 }
 
 .title .first-letter {
-    font-size: 150%; /* Ajusta el tamaño de la primera letra según lo desees */
+    font-size: 150%;
+    /* Ajusta el tamaño de la primera letra según lo desees */
     line-height: 1;
 }
 
+.layout {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    gap: 120px;
+}
+
+.grow1 {
+    flex-grow: 1;
+}
