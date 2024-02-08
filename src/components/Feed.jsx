@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from '@mui/material'
-import { Sidebar, Discography, Bio, Redes } from './'
+import { Sidebar, Discography, Bio, Redes, Blog } from './'
 import { categories } from '../utils/constants'
 
 const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
@@ -43,6 +43,10 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
                 {
                     selected == 'Redes' &&
                     <Redes />
+                }
+                                {
+                    selected == 'Blog' &&
+                    <Blog />
                 }
             </Box>
 

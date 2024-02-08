@@ -98,6 +98,8 @@ a {
     height: 110px;
 }
 
+
+/* BIO */
 .title {
     font-family: 'Special Elite', cursive;
 }
@@ -108,13 +110,23 @@ a {
     line-height: 1;
 }
 
+
+/* REDES */
 .layout {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
+    justify-content: center;
+    align-items: center; 
     gap: 120px;
 }
 
-.grow1 {
-    flex-grow: 1;
+.iconoRedes {
+    color: #516655;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconoRedes:hover {
+    color: #CBCF88;
+    cursor: pointer;
 }

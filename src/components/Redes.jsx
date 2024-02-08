@@ -14,17 +14,17 @@ const Redes = () => {
                     </Box>
                     <Box class="layout">
                         <div class="">                        
-                            <span style={{ color:'#516655', display:'flex', alignItems:'center', justifyContent: 'center'}}>
-                                <FacebookIcon fontSize="large" style={{transform: 'scale(2.3)'}}/>
+                            <span className="iconoRedes">
+                                <FacebookIcon className="hoverRedes" fontSize="large" style={{transform: 'scale(2.3)'}}/>
                             </span>
                         </div>
                         <div class="">
-                            <span style={{ color:'#516655', display:'flex', alignItems:'center', justifyContent: 'center'}}>
+                            <span className="iconoRedes">
                                 <InstagramIcon fontSize="large" style={{transform: 'scale(2.3)'}}/>
                             </span>
                         </div>
                         <div class="">
-                            <span style={{ color:'#516655', display:'flex', alignItems:'center', justifyContent: 'center'}}>
+                            <span className="iconoRedes">
                                 <YouTubeIcon fontSize="large" style={{transform: 'scale(3)'}}/>
                             </span>
                         </div>
