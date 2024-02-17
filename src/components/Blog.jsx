@@ -1,13 +1,7 @@
 import * as React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
+import { Divider, ListItemText, ListItem, List } from '@mui/material'
 
-
-
-export default function DividerVariants() {
-    return (
+const Blog = () => (
         <List>
             <ListItem>
                 <ListItemText primary="Full width variant below" />
@@ -26,4 +20,5 @@ export default function DividerVariants() {
             </ListItem>
         </List>
     );
-}
+
+export default Blog

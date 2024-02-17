@@ -1,11 +1,11 @@
-import { Stack, Box, Typography } from '@mui/material'
+import { Stack, Box } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { logo } from '../utils/constants'
 import SearchBar from './SearchBar'
 import firma from '../utils/images/firma3.png'
 
 const Navbar = () => (
-    <Box className='banner-navbar'  sx={{position: 'sticky', top:0, backgroundColor:'#ADBE75', zIndex:'20'}}>
+    <Box className='banner-navbar'  sx={{position: 'sticky', top:0, zIndex:'20'}}>
         <Stack direction='row' alignItems='center' p={2} sx={{backdropFilter:'blur(0px)', display: 'flex', justifyContent: 'space-between',}}>
             <Box sx={{display: 'flex', alignItems: 'center'}}>
                 <Link to='/' style={{display: 'flex', alignItems: 'center', marginLeft:16}}>

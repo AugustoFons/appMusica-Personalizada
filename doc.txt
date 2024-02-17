@@ -1,0 +1,2 @@
+color principal de paleta armado.
+armar el del hover y seguir con seccion colaborar, fijarse color paleta de la cita del bio

@@ -9,8 +9,8 @@ const Sidebar = ({selected, setSelected}) => {
   };
 
   return (
-    <Stack direction='row'
-      sx={{overflowY:'auto', height: {sx:'auto', md:'95%'}, flexDirection: {md: 'column'}, backgroundColor: '#526656'}}
+    <Stack direction='row' 
+      sx={{overflowY:'auto', height: {sx:'auto', md:'95%'}, flexDirection: {md: 'column'}, backgroundColor: 'green2019d'}}
     >
       {categories.map((category) => (
         <button className='category-btn'

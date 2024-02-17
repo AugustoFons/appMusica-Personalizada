@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from '@mui/material'
-import { Sidebar, Discography, Bio, Redes, Blog } from './'
+import { Sidebar, Discography, Bio, Redes, Blog, Colaborar } from './'
 import { categories } from '../utils/constants'
 
 const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
@@ -12,22 +12,22 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
             setSelected={setSelected}
             />
             
-            <Typography className='copyright' variant='body2' sx={{mt:1.5, color:'#000'}}>
+            <Typography className='copyright' variant='body2' sx={{mt:1.5, color: 'green2019d'}}>
                 Copyright 2023 Bernardo Schiavi
             </Typography>
             </Box>
 
             <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex:2}}>
-                <Typography variant='h4' fontWeight='bold' mb={2} sx={{display:'flex'}}>
+                <Typography variant='h4' fontWeight='bold' mb={2} sx={{display:'flex', color: 'green2019d'}}>
                     {categories.map((category) => (
                         category.name == selected &&
-                        <span style={{ color:'#516655', marginRight:'10px', display:'flex', alignItems:'center', transform: 'scale(1.3)'}}>
+                        <span style={{ marginRight:'10px', display:'flex', alignItems:'center', transform: 'scale(1.3)'}}>
                             {category.iconFeed}
                         </span>
                     ))
 
                     }
-                    <span className='title' style={{ color:'#516655', letterSpacing: '2px', marginTop:'10px'}}>
+                    <span className='title' style={{ letterSpacing: '2px', marginTop:'10px'}}>
                         {selected}
                     </span>
                 </Typography>
@@ -44,9 +44,13 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
                     selected == 'Redes' &&
                     <Redes />
                 }
-                                {
+                {
                     selected == 'Blog' &&
                     <Blog />
+                }
+                {
+                    selected == 'Colaborar' &&
+                    <Colaborar />
                 }
             </Box>
 
