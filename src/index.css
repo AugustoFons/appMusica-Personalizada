@@ -150,3 +150,18 @@ a {
     0% {transform:translateX(-100%);}
     100% {transform:translateX(100%);}
 }
+
+.copy_btn {
+    width: 24px; /* Equivalente a w-7 */
+    height: 24px; /* Equivalente a h-7 */
+    margin:  5px 5px;
+    margin-top: 2px;
+    border-radius: 50%; /* Equivalente a rounded-full */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semi-transparente */
+    box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2); /* Sombra personalizada */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    display: flex; /* Equivalente a flex */
+    justify-content: center; /* Equivalente a justify-center */
+    align-items: center; /* Equivalente a items-center */
+    cursor: pointer; /* Cursor tipo puntero */
+}
