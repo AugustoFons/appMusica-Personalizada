@@ -125,6 +125,8 @@ a {
     background: linear-gradient(to bottom, #ADBE75 0%,#ADBE75 50%,#ADBE75 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     box-shadow: 0 0 30px rgba(0,0,0,.5);
     z-index:0;
+    width: 330px;
+    height: 210px;
 }
 
 .pago:after {
@@ -164,4 +166,21 @@ a {
     justify-content: center; /* Equivalente a justify-center */
     align-items: center; /* Equivalente a items-center */
     cursor: pointer; /* Cursor tipo puntero */
+    z-index: 10;
+}
+
+.copy_btn:hover {
+    background-color: rgba(255, 255, 255, 0.448); /* Fondo blanco semi-transparente */
+
+}
+
+@media only screen and (max-width: 380px) {
+    .pago {
+        width: 250px;
+        height: 180px;  
+    }
+    .pago:after {
+        width:100px;
+        height:180px;
+    }
 }
