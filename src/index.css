@@ -114,73 +114,126 @@ a {
 .redes {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    gap: 120px;
+    align-items: center;
+    gap: 100px;
+}
+
+.redesGrid {
+    display: grid;
+    grid-template-rows: repeat(2, 60px);
+    grid-template-columns: repeat(2, 90px);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 380px) {
+    .redes {
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 /* COLABORAR */
 .pago {
-    background: -moz-linear-gradient(top, #ADBE75 0%, #ADBE75 50%, #ADBE75 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ADBE75 0%,#ADBE75 50%,#ADBE75 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ADBE75 0%,#ADBE75 50%,#ADBE75 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    box-shadow: 0 0 30px rgba(0,0,0,.5);
-    z-index:0;
+    background: -moz-linear-gradient(top, #ADBE75 0%, #ADBE75 50%, #ADBE75 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ADBE75 0%, #ADBE75 50%, #ADBE75 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ADBE75 0%, #ADBE75 50%, #ADBE75 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    z-index: 0;
     width: 330px;
     height: 210px;
 }
 
 .pago:after {
-    content:'';
-    top:100;
-    width:180px;
-    height:300px;
+    content: '';
+    top: 100;
+    width: 180px;
+    height: 300px;
     border-radius: 10px;
-    transform:translateX(100%);
+    transform: translateX(100%);
     position: absolute;
-    z-index:1;
+    z-index: 1;
     opacity: .3;
     animation: slide 10s;
-    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(128,186,232,0) 99%, rgba(125,185,232,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.8)), color-stop(99%,rgba(128,186,232,0)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* IE10+ */
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* W3C */
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(99%, rgba(128, 186, 232, 0)), color-stop(100%, rgba(125, 185, 232, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+    /* W3C */
 }
+
 /* animate shine */
 @keyframes slide {
-    0% {transform:translateX(-100%);}
-    100% {transform:translateX(100%);}
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .copy_btn {
-    width: 24px; /* Equivalente a w-7 */
-    height: 24px; /* Equivalente a h-7 */
-    margin:  5px 5px;
+    width: 24px;
+    /* Equivalente a w-7 */
+    height: 24px;
+    /* Equivalente a h-7 */
+    margin: 5px 5px;
     margin-top: 2px;
-    border-radius: 50%; /* Equivalente a rounded-full */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semi-transparente */
-    box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2); /* Sombra personalizada */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
-    display: flex; /* Equivalente a flex */
-    justify-content: center; /* Equivalente a justify-center */
-    align-items: center; /* Equivalente a items-center */
-    cursor: pointer; /* Cursor tipo puntero */
+    border-radius: 50%;
+    /* Equivalente a rounded-full */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo blanco semi-transparente */
+    box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2);
+    /* Sombra personalizada */
+    backdrop-filter: blur(10px);
+    /* Efecto de desenfoque */
+    display: flex;
+    /* Equivalente a flex */
+    justify-content: center;
+    /* Equivalente a justify-center */
+    align-items: center;
+    /* Equivalente a items-center */
+    cursor: pointer;
+    /* Cursor tipo puntero */
     z-index: 10;
 }
 
 .copy_btn:hover {
-    background-color: rgba(255, 255, 255, 0.448); /* Fondo blanco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.448);
+    /* Fondo blanco semi-transparente */
 
 }
 
 @media only screen and (max-width: 380px) {
     .pago {
         width: 250px;
-        height: 180px;  
+        height: 180px;
     }
+
     .pago:after {
-        width:100px;
-        height:180px;
+        width: 100px;
+        height: 180px;
     }
+}
+
+/* OTROS ESTILOS */
+.hoverFilter {
+    cursor: pointer;
+    transition: filter 0.5s ease;
+}
+
+.hoverFilter:hover {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(2%) saturate(1064%) hue-rotate(78deg) brightness(90%) contrast(86%);
 }

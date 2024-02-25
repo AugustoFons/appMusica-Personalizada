@@ -12,6 +12,25 @@ const Discography = ({ Cd1, Cd2, setIdCd }) => {
         <Box>
             <Typography variant='h5' fontWeight='semibold' mb={2} mt={3} sx={{display:'flex', justifyContent: 'center'}}>
                 <span className="title" style={{ color:'#8C8F7C', marginRight:'8px', display:'flex', alignItems:'center', whiteSpace:'pre-wrap'}}>
+                    {'2022 |'}
+                </span>
+                <span className="title" style={{ color:'#516655'}}>
+                    Por Qué No?
+                </span>
+            </Typography>
+            <Stack direction='row' flexWrap='wrap' justifyContent='center' gap={2}>
+                <SwiperCard>
+                    {Cd2?.map((item2, idx) => (
+                        <Box key={idx}>
+                            {item2.id && <SwiperSlide> <VideoCard video={item2} setIdCd={setIdCd} /></SwiperSlide>}
+                        </Box>
+                    ))}
+                </SwiperCard>
+
+            </Stack>
+
+            <Typography variant='h5' fontWeight='semibold' mb={2} mt={3} sx={{display:'flex', justifyContent: 'center'}}>
+                <span className="title" style={{ color:'#8C8F7C', marginRight:'8px', display:'flex', alignItems:'center', whiteSpace:'pre-wrap'}}>
                     {'2019 |'}
                 </span>
                 <span className="title" style={{ color:'#516655'}}>
@@ -30,25 +49,6 @@ const Discography = ({ Cd1, Cd2, setIdCd }) => {
                         </Box>
                     ))}
                 </SwiperCard>
-            </Stack>
-
-            <Typography variant='h5' fontWeight='semibold' mb={2} mt={5} sx={{display:'flex', justifyContent: 'center'}}>
-                <span className="title" style={{ color:'#8C8F7C', marginRight:'8px', display:'flex', alignItems:'center', whiteSpace:'pre-wrap'}}>
-                    {'2022 |'}
-                </span>
-                <span className="title" style={{ color:'#516655'}}>
-                    Por Qué No?
-                </span>
-            </Typography>
-            <Stack direction='row' flexWrap='wrap' justifyContent='center' gap={2}>
-                <SwiperCard>
-                    {Cd2?.map((item2, idx) => (
-                        <Box key={idx}>
-                            {item2.id && <SwiperSlide> <VideoCard video={item2} setIdCd={setIdCd} /></SwiperSlide>}
-                        </Box>
-                    ))}
-                </SwiperCard>
-
             </Stack>
         </Box>
     )
