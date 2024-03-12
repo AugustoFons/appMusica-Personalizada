@@ -236,3 +236,12 @@ a {
 .hoverFilter:hover {
     filter: brightness(0) saturate(100%) invert(73%) sepia(2%) saturate(1064%) hue-rotate(78deg) brightness(90%) contrast(86%);
 }
+
+.blog {
+    width: 100%;
+  
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 7fr 1fr;
+    gap: 8px;
+  }
