@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player'
 import { VideoCard, Discography } from './'
 import { Box, Stack } from '@mui/material'
 
-const VideoId = ({Cd1, Cd2, idCd, setIdCd}) => {
+const VideoId = ({Cd1, Cd2, idCd, setIdCd, mode, toggleSwitch, setMode}) => {
     const { id } = useParams()
 
     const [key, setKey] = useState(0);
@@ -36,7 +36,7 @@ const VideoId = ({Cd1, Cd2, idCd, setIdCd}) => {
                 <Box px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" >
                         {Cd1?.map((item1, idx) => (
                             <Box  py={1} key={idx}>
-                                {item1.id &&<VideoCard video={item1} setIdCd={setIdCd} />}
+                                {item1.id &&<VideoCard video={item1} setIdCd={setIdCd} mode={mode} setMode={setMode} toggleSwitch={toggleSwitch}/>}
                             </Box>
                         ))}
                 </Box>
@@ -62,7 +62,7 @@ const VideoId = ({Cd1, Cd2, idCd, setIdCd}) => {
                 <Box px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" >
                         {Cd2?.map((item2, idx) => (
                             <Box py={1} key={idx}>
-                                {item2.id &&<VideoCard video={item2} setIdCd={setIdCd} />}
+                                {item2.id &&<VideoCard video={item2} setIdCd={setIdCd} mode={mode} setMode={setMode} toggleSwitch={toggleSwitch}/>}
                             </Box>
                         ))}
                 </Box>

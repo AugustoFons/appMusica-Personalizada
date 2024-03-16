@@ -5,7 +5,7 @@ import { SwiperSlide } from 'swiper/react';
 import { useTheme } from '@mui/material';
 
 
-const Discography = ({ Cd1, Cd2, setIdCd, mode }) => {
+const Discography = ({ Cd1, Cd2, setIdCd, mode, setMode, toggleSwitch }) => {
     const theme = useTheme();
 
     if (!Cd1?.length) return <Loader />
@@ -24,7 +24,7 @@ const Discography = ({ Cd1, Cd2, setIdCd, mode }) => {
                 <SwiperCard>
                     {Cd2?.map((item2, idx) => (
                         <Box key={idx}>
-                            {item2.id && <SwiperSlide> <VideoCard video={item2} setIdCd={setIdCd} mode={mode}/></SwiperSlide>}
+                            {item2.id && <SwiperSlide> <VideoCard año={2022} video={item2} setIdCd={setIdCd} mode={mode} setMode={setMode} toggleSwitch={toggleSwitch}/></SwiperSlide>}
                         </Box>
                     ))}
                 </SwiperCard>
@@ -45,7 +45,7 @@ const Discography = ({ Cd1, Cd2, setIdCd, mode }) => {
                         <Box key={idx}>
                             {item1.id && 
                                 <SwiperSlide>
-                                    <VideoCard video={item1} setIdCd={setIdCd} mode={mode}/>
+                                    <VideoCard año={2019} video={item1} setIdCd={setIdCd} mode={mode} setMode={setMode} toggleSwitch={toggleSwitch}/>
                                 </SwiperSlide>
                             }
                         </Box>

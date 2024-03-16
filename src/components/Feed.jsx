@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material'
 import { Sidebar, Discography, Bio, Redes, Blog, Colaborar } from './'
 import { categories } from '../utils/constants'
 
-const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode}) => {
+const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode, setMode, toggleSwitch}) => {
 
     return (
         <Stack sx={{flexDirection: {sx: 'column', md: 'row'}}}>
@@ -35,7 +35,7 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode}) => {
 
                 {
                     selected == 'Discografia' &&
-                    <Discography Cd1={Cd1} Cd2={Cd2} setIdCd={setIdCd} mode={mode} />
+                    <Discography Cd1={Cd1} Cd2={Cd2} setIdCd={setIdCd} mode={mode} setMode={setMode} toggleSwitch={toggleSwitch}/>
                 }
                 {
                     selected == 'Bio' &&

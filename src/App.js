@@ -4,6 +4,7 @@ import { Navbar, Feed, VideoId } from './components'
 import { fetchApi } from './utils/fetchApi'
 import { useEffect, useState } from 'react'
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
 const theme = createTheme({
     palette: {
@@ -15,14 +16,15 @@ const theme = createTheme({
         bg2022: '#c1d4de',
     },
 });
-/*         green2019d: "#28306E",
-    green2019hover: '#1185C7', */
-
-
 
 const App = () => {
     const [selected, setSelected] = useState('Bio')
     const [mode, setMode] = useState(true)
+    const [checked, setChecked] = useState(false);
+
+    const toggleSwitch = () => {
+        setChecked((prev) => !prev);
+    };
 
     const [Cd1, setCd1] = useState()
     const [Cd2, setCd2] = useState()
@@ -39,10 +41,10 @@ const App = () => {
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <Box sx={{ backgroundColor: mode ? 'bg2019' : 'bg2022' }}>
-                    <Navbar mode={mode} setMode={setMode} />
+                    <Navbar mode={mode} setMode={setMode} checked={checked} toggleSwitch={toggleSwitch} />
                     <Routes>
-                        <Route path='/' exact element={<Feed Cd1={Cd1} Cd2={Cd2} selected={selected} setSelected={setSelected} setIdCd={setIdCd} mode={mode} />} />
-                        <Route path='/video/:id' element={<VideoId Cd1={Cd1} Cd2={Cd2} idCd={idCd} setIdCd={setIdCd} />} />
+                        <Route path='/' exact element={<Feed Cd1={Cd1} Cd2={Cd2} selected={selected} setSelected={setSelected} setIdCd={setIdCd} mode={mode} setMode={setMode} toggleSwitch={toggleSwitch} />} />
+                        <Route path='/video/:id' element={<VideoId Cd1={Cd1} Cd2={Cd2} idCd={idCd} setIdCd={setIdCd} mode={mode} setMode={setMode} toggleSwitch={toggleSwitch} />} />
                     </Routes>
                 </Box>
             </BrowserRouter>

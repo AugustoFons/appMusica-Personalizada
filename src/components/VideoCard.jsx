@@ -2,10 +2,21 @@ import { Link } from "react-router-dom";
 import { Typography, Card, CardContent, CardMedia } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
-const VideoCard = ({ video: { id , snippet }, setIdCd, mode }) => {
+const VideoCard = ({ video: { id , snippet }, setIdCd, mode, setMode, toggleSwitch, año }) => {
     
     const handleCd = () => {
         setIdCd(snippet?.playlistId);
+        if(mode == false && año==2022) {
+            setMode(false)
+        } else if(mode == true && año==2022) {
+            setMode(false)
+            toggleSwitch();
+        } else if(mode == true && año==2019) {
+            setMode(true)
+        } else if(mode == false && año==2019) {
+            setMode(true)
+            toggleSwitch();
+        }
     };
 
     return (
