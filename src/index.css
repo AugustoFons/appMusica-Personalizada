@@ -27,15 +27,6 @@ a {
     background-color: transparent;
 }
 
-.category-btn:hover {
-    background-color: #CBCF88 !important;
-    color: white !important;
-}
-
-.category-btn:hover span {
-    color: white !important;
-}
-
 .react-player {
     height: 77vh !important;
     width: 100% !important;
@@ -47,7 +38,8 @@ a {
     width: 150px;
 }
 
-.category-btn {
+.categorias-btn2019,
+.categorias-btn2022 {
     font-weight: 600 !important;
     text-transform: capitalize;
     display: flex;
@@ -61,6 +53,16 @@ a {
     margin: 8.5px 6px;
     border-radius: 20px;
     transition: all 0.3s ease;
+}
+
+.categorias-btn2019:hover {
+    background-color: #CBCF88;
+    color: white;
+}
+
+.categorias-btn2022:hover {
+    background-color: #1185C7;
+    color: white;
 }
 
 @media screen and (max-width: 900px) {
@@ -89,9 +91,18 @@ a {
     }
 }
 
-.banner-navbar {
+.nav2019 {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1698119009/banner2_cabaf9.jpg');
     background-size: cover;
+    background-color: #000;
+    background-repeat: no-repeat;
+    height: 110px;
+}
+
+.nav2022 {
+    background-image: url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1710435022/portada2_scflf4.jpg');
+    background-size: cover;
+    background-position: center;
     background-color: #000;
     background-repeat: no-repeat;
     height: 110px;
@@ -105,7 +116,6 @@ a {
 
 .title .first-letter {
     font-size: 150%;
-    /* Ajusta el tamaño de la primera letra según lo desees */
     line-height: 1;
 }
 
@@ -237,11 +247,24 @@ a {
     filter: brightness(0) saturate(100%) invert(73%) sepia(2%) saturate(1064%) hue-rotate(78deg) brightness(90%) contrast(86%);
 }
 
+
+/* BLOG */
 .blog {
     width: 100%;
-  
+
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 7fr 1fr;
     gap: 8px;
-  }
+}
+
+/* MODE POSICION */
+.modeP {
+    right: 22px;
+    bottom: 20px;
+}
+
+.modeP:hover {
+    transform: scale(1.2);
+    transition: all 0.4s;
+}

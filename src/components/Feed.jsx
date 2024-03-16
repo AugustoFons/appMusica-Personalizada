@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material'
 import { Sidebar, Discography, Bio, Redes, Blog, Colaborar } from './'
 import { categories } from '../utils/constants'
 
-const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
+const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode}) => {
 
     return (
         <Stack sx={{flexDirection: {sx: 'column', md: 'row'}}}>
@@ -10,6 +10,7 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
             <Sidebar
             selected={selected}
             setSelected={setSelected}
+            mode={mode}
             />
             
             <Typography className='copyright' variant='body2' sx={{mt:1.5, color: 'green2019d'}}>
@@ -18,7 +19,7 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
             </Box>
 
             <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex:2}}>
-                <Typography variant='h4' fontWeight='bold' mb={2} sx={{display:'flex', color: 'green2019d'}}>
+                <Typography variant='h4' fontWeight='bold' mb={2} sx={{display:'flex', color: mode ? 'green2019d' : 'blue2022d'}}>
                     {categories.map((category) => (
                         category.name == selected &&
                         <span style={{ marginRight:'10px', display:'flex', alignItems:'center', transform: 'scale(1.3)'}}>
@@ -38,7 +39,7 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd}) => {
                 }
                 {
                     selected == 'Bio' &&
-                    <Bio />
+                    <Bio mode={mode}/>
                 }
                 {
                     selected == 'Redes' &&
