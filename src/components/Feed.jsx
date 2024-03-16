@@ -35,7 +35,7 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode}) => {
 
                 {
                     selected == 'Discografia' &&
-                    <Discography Cd1={Cd1} Cd2={Cd2} setIdCd={setIdCd} />
+                    <Discography Cd1={Cd1} Cd2={Cd2} setIdCd={setIdCd} mode={mode} />
                 }
                 {
                     selected == 'Bio' &&
