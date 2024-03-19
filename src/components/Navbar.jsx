@@ -9,7 +9,7 @@ import firma2022 from '../utils/images/firma.png'
 const Navbar = ({mode, setMode, checked, toggleSwitch}) => (
     <Box className={mode ? 'nav2019' : 'nav2022'}  sx={{position: 'sticky', top:0, zIndex:'20', width:'100%'}}>
         <Stack direction='row' alignItems='center' pt={1} sx={{backdropFilter:'blur(0px)', display: 'flex', justifyContent: 'space-between',}}>
-            <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'start', marginLeft: mode ? '10px' : '0px', marginTop: '4px'}}>
+            <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'start', marginLeft: mode ? '10px' : '-18px', marginTop: '4px'}}>
                 <span style={{display: 'flex', alignItems: 'center'}}>
                     <SwitchMode className='modeP' onClick={() => !setMode(!mode)} checked={checked} onChange={toggleSwitch}  />
                 </span>

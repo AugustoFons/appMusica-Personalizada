@@ -43,11 +43,11 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode, setMode, toggleSw
                 }
                 {
                     selected == 'Redes' &&
-                    <Redes />
+                    <Redes mode={mode} />
                 }
                 {
                     selected == 'Blog' &&
-                    <Blog />
+                    <Blog mode={mode}/>
                 }
                 {
                     selected == 'Colaborar' &&

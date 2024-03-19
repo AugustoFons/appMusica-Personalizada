@@ -32,12 +32,6 @@ a {
     width: 100% !important;
 }
 
-.search-bar {
-    border: none;
-    outline: none;
-    width: 150px;
-}
-
 .categorias-btn2019,
 .categorias-btn2022 {
     font-weight: 600 !important;
@@ -92,21 +86,22 @@ a {
 }
 
 .nav2019 {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8)), url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1698119009/banner2_cabaf9.jpg');
+    background-image: url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1698119009/banner2_cabaf9.jpg');
     background-size: cover;
-    background-color: #000;
+    background-color: #526656;
     background-repeat: no-repeat;
     height: 110px;
 }
 
 .nav2022 {
-    background-image: url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1710435022/portada2_scflf4.jpg');
+    background-color: #f0f0f0; /* Color de fondo */
+    background-image: url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1710821416/globoo_eadyvg.jpg');
     background-size: cover;
     background-position: right;
-    background-color: #000;
     background-repeat: no-repeat;
     height: 110px;
 }
+
 
 
 /* BIO */
@@ -247,6 +242,9 @@ a {
     filter: brightness(0) saturate(100%) invert(73%) sepia(2%) saturate(1064%) hue-rotate(78deg) brightness(90%) contrast(86%);
 }
 
+.filterBlue {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(60%) saturate(1738%) hue-rotate(214deg) brightness(86%) contrast(92%);
+}
 
 /* BLOG */
 .blog {
@@ -258,12 +256,7 @@ a {
     gap: 8px;
 }
 
-/* MODE POSICION */
-/* .modeP {
-    right: 22px;
-    bottom: 20px;
-} */
-
+/* MODOS */
 .modeP:hover {
     transform: scale(1.05);
     transition: all 0.4s;
