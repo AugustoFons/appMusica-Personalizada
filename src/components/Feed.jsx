@@ -51,7 +51,7 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode, setMode, toggleSw
                 }
                 {
                     selected == 'Colaborar' &&
-                    <Colaborar />
+                    <Colaborar mode={mode}/>
                 }
             </Box>
 
