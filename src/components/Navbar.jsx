@@ -1,9 +1,8 @@
 import { SwitchMode } from './';
 import { Stack, Box } from '@mui/material'
 import { Link } from 'react-router-dom'
-import { logo, logo2022 } from '../utils/constants'
-import firma2019 from '../utils/images/sc.png'
-import firma2022 from '../utils/images/firma.png'
+import firma2019 from '../utils/images/firma19.png'
+import firma2022 from '../utils/images/firma22.png'
 
 
 const Navbar = ({mode, setMode, checked, toggleSwitch}) => (

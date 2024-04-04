@@ -27,11 +27,7 @@ a {
     background-color: transparent;
 }
 
-.react-player {
-    height: 77vh !important;
-    width: 100% !important;
-}
-
+/* BOTONES SIDEBAR */
 .categorias-btn2019,
 .categorias-btn2022 {
     font-weight: 600 !important;
@@ -79,12 +75,9 @@ a {
     .react-player {
         height: 45vh !important;
     }
-
-    .search-bar {
-        width: 100px;
-    }
 }
 
+/* NAVBAR */
 .nav2019 {
     background-image: url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1698119009/banner2_cabaf9.jpg');
     background-size: cover;
@@ -170,21 +163,16 @@ a {
     z-index: 1;
     opacity: .3;
     animation: slide 10s;
+    /* bg para diferentes navegadores */
     background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
-    /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(99%, rgba(128, 186, 232, 0)), color-stop(100%, rgba(125, 185, 232, 0)));
-    /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
-    /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
-    /* Opera 11.10+ */
     background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
-    /* IE10+ */
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
-    /* W3C */
 }
 
-/* animate shine */
+/* ANIMACION PAGOS */
 @keyframes slide {
     0% {
         transform: translateX(-100%);
@@ -197,34 +185,23 @@ a {
 
 .copy_btn {
     width: 24px;
-    /* Equivalente a w-7 */
     height: 24px;
-    /* Equivalente a h-7 */
     margin: 5px 5px;
     margin-top: 2px;
     border-radius: 50%;
-    /* Equivalente a rounded-full */
     background-color: rgba(255, 255, 255, 0.1);
-    /* Fondo blanco semi-transparente */
     box-shadow: inset 10px -50px 94px 0 rgba(199, 199, 199, 0.2);
-    /* Sombra personalizada */
     backdrop-filter: blur(10px);
-    /* Efecto de desenfoque */
     display: flex;
-    /* Equivalente a flex */
     justify-content: center;
-    /* Equivalente a justify-center */
     align-items: center;
-    /* Equivalente a items-center */
     cursor: pointer;
-    /* Cursor tipo puntero */
     z-index: 10;
 }
 
 .copy_btn:hover {
     background-color: rgba(255, 255, 255, 0.448);
     /* Fondo blanco semi-transparente */
-
 }
 
 @media only screen and (max-width: 380px) {
@@ -238,6 +215,13 @@ a {
         height: 180px;
     }
 }
+
+/* REPRODUCTOR */
+.react-player {
+    height: 77vh !important;
+    width: 100% !important;
+}
+
 
 /* OTROS ESTILOS */
 .hoverFilter {

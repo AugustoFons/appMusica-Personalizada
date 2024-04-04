@@ -10,7 +10,6 @@ import QueueMusicIcon from '@mui/icons-material/QueueMusic';
 
 export const logo = 'https://res.cloudinary.com/ddgzljvfv/image/upload/v1697934842/logo-bernar_uy8kj5.png';
 export const logo2022 = 'https://res.cloudinary.com/ddgzljvfv/image/upload/v1710446603/Untitled_Project__1_-removebg-preview_oid6ed.png';
-export const navImg1 = 'https://res.cloudinary.com/ddgzljvfv/image/upload/v1697948135/1-_Capital_del_Carnaval._kfcu9z.jpg'
 
 export const categories = [
     { name: 'Bio', icon: <KayakingIcon />, iconFeed: <KayakingIcon fontSize='large' />, search: 'Bernardo Schiavi'  },
