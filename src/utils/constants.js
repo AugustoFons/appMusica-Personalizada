@@ -21,3 +21,23 @@ export const categories = [
     { name: 'Redes', icon: <RecommendIcon />, iconFeed: <RecommendIcon fontSize='large' />, search: 'Bernardo Schiavi'},
     { name: 'Colaborar', icon: <CurrencyExchangeIcon />, iconFeed: <CurrencyExchangeIcon fontSize='large' />, search: 'Bernardo Schiavi Ni Loco'}
 ];
+
+export const DataBlog = async () => {
+    try {
+        const res = await fetch(process.env.REACT_APP_GOOGLE_SHEETS);
+        const csv = await res.text();
+        const itemBlog = csv
+            .split("\n")
+            .slice(1)
+            .map((row) => {
+                const [titulo, fecha, texto] = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                const primerLetra = texto.substring(1,2)
+                const resaltado = texto.substring(2,14)
+                return {titulo, fecha, texto, primerLetra, resaltado};
+            });
+        return itemBlog;
+    } catch (error) {
+        console.error('Error fetching blog data:', error);
+        throw error;
+    }
+};
