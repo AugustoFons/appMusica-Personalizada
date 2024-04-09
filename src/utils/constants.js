@@ -38,7 +38,8 @@ export const DataBlog = async () => {
             const texto = row['texto'] ? row['texto'].trim() : '';
             const primerLetra = texto.substring(0, 1);
             const resaltado = texto.substring(1, 14);
-
+/*             const textoSinComillas = texto.replace(/^"|"$/g, '')
+ */
             return { titulo, fecha, texto, primerLetra, resaltado };
         });
 
