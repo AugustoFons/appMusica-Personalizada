@@ -1,10 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Box, Switch } from '@mui/material'
+import { Box } from '@mui/material'
 import { Navbar, Feed, VideoId } from './components'
 import { fetchApi } from './utils/fetchApi'
 import { useEffect, useState } from 'react'
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
     palette: {
@@ -19,8 +18,8 @@ const theme = createTheme({
 
 const App = () => {
     const [selected, setSelected] = useState('Bio')
-    const [mode, setMode] = useState(true)
-    const [checked, setChecked] = useState(false);
+    const [mode, setMode] = useState(true)  //control modos
+    const [checked, setChecked] = useState(false);  //estado del switch
 
     const toggleSwitch = () => {
         setChecked((prev) => !prev);

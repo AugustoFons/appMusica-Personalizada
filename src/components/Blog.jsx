@@ -1,9 +1,8 @@
 import * as React from 'react';
+import { Loader } from './';
 import { Divider, ListItem, List, Typography } from '@mui/material'
 import { DataBlog } from '../utils/constants'
-import { useState } from 'react';
-import { useEffect } from 'react';
-
+import { useState, useEffect} from 'react';
 
 const Blog = ({mode}) => {
     const [blogData, setBlogData] = useState([])
@@ -21,6 +20,8 @@ const Blog = ({mode}) => {
         fetchData()
     }, [])
     console.log(blogData)
+
+    if(!blogData?.length) return <Loader />
 
 return (
     blogData.map((item) => (
@@ -41,7 +42,7 @@ return (
             <ListItem>
             <Typography variant='body1' sx={{ maxWidth: 700, mx: 'auto', textAlign: 'justify', color: mode ? 'green2019d' : 'blue2022d', whiteSpace: 'pre-line' }}>
                 <span  className="title" sx={{ lineHeight: 1.2 }}>
-                    <strong className="first-letter">{item.primerLetra}</strong><strong>{item.resaltado}</strong>{item.texto.substring(14, item.texto.length - 1).replace(/&/g, "\n")}
+                    <strong className="first-letter">{item.primerLetra}</strong><strong>{item.resaltado}</strong>{item.texto.substring(14, item.texto.length).replace(/&/g, "\n")}
                 </span>
             </Typography>
             </ListItem>

@@ -1,7 +1,5 @@
 import { Switch } from '@mui/material'
 import { styled } from '@mui/material/styles';
-import React, { useState } from 'react';
-import Button from '@mui/material/Button';
 
 const SwitchMode = styled(Switch)(({ theme }) => ({
     width: 144,
@@ -16,7 +14,7 @@ const SwitchMode = styled(Switch)(({ theme }) => ({
             transform: 'translateX(56px)',
             '& .MuiSwitch-thumb:before': {
                 backgroundSize: '100%',
-                backgroundImage: `url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1710446603/Untitled_Project__1_-removebg-preview_oid6ed.png')`, // Reemplazamos la URL por tu imagen
+                backgroundImage: `url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1710446603/Untitled_Project__1_-removebg-preview_oid6ed.png')`,
             },
             '& + .MuiSwitch-track': {
                 opacity: 1,
@@ -37,7 +35,7 @@ const SwitchMode = styled(Switch)(({ theme }) => ({
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: '100%',
-            backgroundImage: `url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1697934842/logo-bernar_uy8kj5.png')`, // Reemplazamos la URL por tu imagen
+            backgroundImage: `url('https://res.cloudinary.com/ddgzljvfv/image/upload/v1697934842/logo-bernar_uy8kj5.png')`,
         },
     },
     '& .MuiSwitch-track': {

@@ -25,7 +25,7 @@ export const categories = [
 
 export const DataBlog = async () => {
     try {
-        const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vS46Pc6kuSNeAeFYutkS0okAilbNfUztutHsDfp2Igz5DDCgh-oYdB00FLj5xS4x6H-vEJ_MOw0QrZw/pub?gid=0&single=true&output=csv');
+        const res = await fetch(process.env.REACT_APP_GOOGLE_SHEETS);
         const csv = await res.text();
         console.log(csv)
         

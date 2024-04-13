@@ -8,6 +8,7 @@ const Sidebar = ({ selected, setSelected, mode }) => {
 
     const handleCategory = (category) => {
         setSelected(category.name)
+        window.scrollTo(0, 0);
     };
 
     return (
