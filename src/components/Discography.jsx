@@ -8,8 +8,6 @@ import { useTheme } from '@mui/material';
 const Discography = ({ Cd1, Cd2, setIdCd, mode, setMode, toggleSwitch }) => {
     const theme = useTheme();
 
-    if (!Cd1?.length) return <Loader />
-
     return (
         <Box>
             <Typography variant='h5' fontWeight='semibold' mb={2} mt={3} sx={{display:'flex', justifyContent: 'center'}}>

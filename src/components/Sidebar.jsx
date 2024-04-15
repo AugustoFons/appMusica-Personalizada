@@ -1,14 +1,13 @@
-import { Box, Stack, Container  } from '@mui/material'
+import { Stack  } from '@mui/material'
 import { categories } from '../utils/constants'
 import { useTheme } from '@mui/material';
 
 
-const Sidebar = ({ selected, setSelected, mode }) => {
+const Sidebar = ({ selected, mode, setSelected }) => {
     const theme = useTheme();
 
     const handleCategory = (category) => {
         setSelected(category.name)
-        window.scrollTo(0, 0);
     };
 
     return (

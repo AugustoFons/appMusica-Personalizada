@@ -30,7 +30,7 @@ a {
 /* BOTONES SIDEBAR */
 .categorias-btn2019,
 .categorias-btn2022 {
-    font-weight: 600 !important;
+    font-weight: 600;
     text-transform: capitalize;
     display: flex;
     align-items: center;

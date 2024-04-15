@@ -25,6 +25,7 @@ const App = () => {
         setChecked((prev) => !prev);
     };
 
+
     const [Cd1, setCd1] = useState()
     const [Cd2, setCd2] = useState()
     const [idCd, setIdCd] = useState()
