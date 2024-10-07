@@ -2,8 +2,13 @@ import { Box, Stack, Typography } from '@mui/material'
 import { Sidebar, Discography, Bio, Redes, Blog, Colaborar } from './'
 import { categories } from '../utils/constants'
 import { useEffect } from 'react'
+import { useTheme } from '@mui/material';
+import siteConstruccion from '../utils/images/const.png'
+import siteConstruccion2 from '../utils/images/const2.png'
+
 
 const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode, setMode, toggleSwitch}) => {
+    const theme = useTheme();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -57,6 +62,25 @@ const Feed = ({Cd1, Cd2, selected, setSelected, setIdCd, mode, setMode, toggleSw
                 {
                     selected == 'Colaborar' &&
                     <Colaborar mode={mode}/>
+                }
+                {
+                    (selected == 'Lanzamientos' || selected == 'Playlists' || selected == 'Proximamente')  &&
+                    <Box sx={{display:'flex', flexDirection: 'column', alignItems: 'center', minHeight: '60vh', justifyContent:'center'}} >
+                        <div>
+                            <Typography variant='h4' fontWeight='semibold' style={{color: mode ? theme.palette.green2019d : theme.palette.blue2022d}} >
+                                <span className="title" >
+                                    Sección en construcción
+                                </span>
+                            </Typography>
+                        </div>
+                        <div style={{marginBottom: '40px', position: 'relative', bottom: '5px'}}>
+                            { mode ?
+                                <img src={siteConstruccion} alt="Sitio en construccion" />
+                            :
+                                <img src={siteConstruccion2} alt="Sitio en construccion" />
+                            }
+                        </div>
+                    </Box>
                 }
             </Box>
 

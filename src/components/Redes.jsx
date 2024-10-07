@@ -9,9 +9,9 @@ import amazon from '../utils/images/amz.png'
 
 const Redes = ({mode}) => {
     return (
-        <Box sx={{ maxWidth: 1000, mt: 1, mx: 'auto'}}>
+        <Box sx={{ maxWidth: 1000, mt: 1, mx: 'auto', minHeight:'80vh'}}>
                     <Box style={{ }}>
-                        <Typography variant='h6' sx={{display: 'flex', justifyContent: 'center', textAlign: 'center', color: mode ? 'green2019d' : 'blue2022d', my: 3}}>
+                        <Typography variant='h4' sx={{display: 'flex', justifyContent: 'center', textAlign: 'center', color: mode ? 'green2019d' : 'blue2022d', mt: 4, mb:6}}>
                             <span className="title" sx={{ lineHeight: 1.2 }}>
                                 ¡Seguime en mis Redes!
                             </span>
@@ -29,7 +29,7 @@ const Redes = ({mode}) => {
                             </span>
                     </Box>
 
-                    <Typography variant='h6' sx={{display: 'flex', justifyContent: 'center', textAlign: 'center', color: mode ? 'green2019d' : 'blue2022d', mt:6, mb:2 }}>
+                    <Typography variant='h5' sx={{display: 'flex', justifyContent: 'center', textAlign: 'center', color: mode ? 'green2019d' : 'blue2022d', mt:7, mb:3 }}>
                             <span className="title" sx={{ lineHeight: 1.2 }}>
                                 Y escuchame en la plataforma que más te guste
                             </span>
